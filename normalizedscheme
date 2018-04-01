@@ -1,0 +1,24 @@
+Unique IDs for each entry
+
+Year can have many cars
+
+model_title/model_code belong to make_code/make_title
+
+make_code/make_title one to many
+-----
+
+Table make_title:
+make_title (PK),
+make_code,
+year (FK)
+
+Table model_title:
+model_title (PK),
+make_title (FK)
+model_code,
+year (FK)
+
+Table year:
+year (PK),
+make_title_id (FK),
+model_title_id (FK),
